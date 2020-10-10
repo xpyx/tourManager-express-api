@@ -1,0 +1,11 @@
+{
+  "name": "tourmanager-express-api",
+  "version": "1.0.0",
+  "description": "API for tourManager mobile application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xpyx",
+  "license": "ISC"
+}
