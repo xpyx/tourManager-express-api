@@ -67,6 +67,6 @@ const onListening = () => {
 /**
  * Listen on provided port, on all network interfaces.
  */
-server.listen(port, '192.168.43.86');
+server.listen(port, '127.0.0.1');
 server.on('error', onError);
 server.on('listening', onListening);
