@@ -1,4 +1,6 @@
 #Express API template
+Based on this excellent article:
+https://www.smashingmagazine.com/2020/04/express-api-backend-project-postgresql/
 
 [![Build Status](https://travis-ci.com/xpyx/tourManager-express-api.svg?branch=main)](https://travis-ci.com/xpyx/tourManager-express-api)
 
