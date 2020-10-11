@@ -2,7 +2,6 @@ language: node_js
 env:
   global:
     - CC_TEST_REPORTER_ID=ef41f1941eef00b074e89d842e2c6a51df7765dd11663531186ce6c6233e8b4f
-    - CONNECTION_STRING="postgresql://postgres:postgres@localhost:5432/testdb"
   matrix:
   include:
   - node_js: '12'
@@ -31,3 +30,9 @@ services:
     - psql -c 'create database testdb;' -U postgres
     - sudo cp /etc/postgresql/{9.6,10}/main/pg_hba.conf
     - sudo /etc/init.d/postgresql restart
+deploy:
+  provider: heroku
+  app:
+    master: tourmanager
+  api_key:
+    secure: BBTNG61gF75MJ/DCNU5Kf8GXqFCZSXR9fky+Op7TqVt8idPFzpApqojlJYjEA4oDAjfJjwVx/n68CkJPtFV7xibbiVqBwO3cm80PIMdsm6dshxkUBS1g1asKlSylfXI3En3JmUkd79LywQo8ifdnERUUEiCO5dxpaeMyJjVGjHiqRIjKeQSTpIUiOY+n3MrUwlhbzB9E7lvYPWFMXZJgQmZnN/KZrm3NHdXe+HILE/EOhJbkNphIKKrI3M3cwuwdLyuaIcVfPk+NV8InNottP0aGtUhM1W50QAWQJO0/EaDihrLo8BONZag+ZwHaL6MIuSjSSMAI69v5WjxVg+g7Heu08CiPSBoH36FXU4ikRmBgQqPIHN1HEU9Tjw/juvL3a+LbnKWTariGaSMeILEe46M7SobiLd8zrSwQiDQswlvQ1hqXTdt2QM3m4eb/ElQI2ZsVv1trahOKWz83VDXsV8rj7cDm8nTxryaWC+ukDpG7hRxsqlIb/Y/SYlQgeyG7Ujk25ThzWST17wfT2vUPIVWALw+zedKH2gbCxcQUIL3tGX7VB7LG92feEHBzHCu6nMsso3lhqmGfvL2kBu54jL00lH/qK6bgN4vHtqy5d4uPgLsS0Cd0stCP72pBsuhePu1JEAMjk4ZZZmNBgeKXvpXkOkcpggh6LSZGJpVSDcg=
